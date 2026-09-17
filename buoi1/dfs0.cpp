@@ -7,9 +7,9 @@ vector<long long>adj[100000];
 
 void dfs(long long u)
 {
+	d[u] = 1;
 	for(auto &v : adj[u])
 	{
-		d[u] = 1;
 		if(d[v] == 0) dfs(v);
 	}
 }
