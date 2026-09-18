@@ -28,7 +28,7 @@ int main()
 		{
 			cin >> v;
 			adj[u].push_back(v);
-			// adj[v].push_back(u);
+			adj[v].push_back(u);
 		}
 	}
 
