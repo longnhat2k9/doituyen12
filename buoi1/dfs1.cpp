@@ -5,13 +5,13 @@ long long n, k;
 vector<long long>adj[100000];
 int d[100000];
 long long s, t;
+long long cnt = 1;
 
 void dfs(long long u)
 {
-	d[u] = 1;
+	d[u] = cnt;
 	for(auto &v : adj[u])
-	{
-		if(v == t) s = -10;
+	{		
 		if(d[v] == 0) dfs(v);
 	}
 }
@@ -27,14 +27,21 @@ int main()
 		adj[v].push_back(u);
 	}
 
+	memset(d, 0, sizeof(d));
+	for(long long i = 1; i <= n; i++)
+	{
+		if(d[i] == 0)
+		{
+			dfs(i);
+			cnt++;
+		}
+	}
+
 	long long q; cin >> q;
 	while(q--)
 	{
-		memset(d, 0, sizeof(d));
 		cin >> s >> t;
-		d[s] = 1;
-		dfs(s);
-		if(s == -10) cout << 1 << endl;
+		if(d[s] == d[t]) cout << 1 << endl;
 		else cout << -1 << endl;
 	}
 }
