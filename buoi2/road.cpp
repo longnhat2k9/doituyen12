@@ -47,7 +47,7 @@ int main()
 		adj[v].push_back(u);
 		for(auto &k : road)
 		{
-			if(ck(k.x, k.y, u) != ck(k.x, k.y, v)) 
+			if(ck(k.x, k.y, u) != ck(k.x, k.y, v) && ck(u, v, k.x) != ck(u, v, k.y)) 
 			{
 				adj[u].push_back(k.x);
 				adj[k.x].push_back(u);
