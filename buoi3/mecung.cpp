@@ -37,7 +37,8 @@ bool bfs()
 				q.push({x + dx[k], y + dy[k]});
 			}
 
-			if(a[x + dx[k]][y + dy[k]] == 144680345676153346)
+			// khi dung memset(a, 2, sizeof(a)) thi gia tri duoc ghi vao la 144680345676153346, co the tu in ra console de biet duoc
+			if(a[x + dx[k]][y + dy[k]] == 144680345676153346) 
 			{
 				tx = x;
 				ty = y;
