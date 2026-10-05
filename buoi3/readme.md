@@ -10,3 +10,9 @@
 ## Part 2
 
 Problem: [PDF](./de.pdf)
+
+- [tsps.cpp](./tsps.cpp)
+- [plan.cpp](./plan.cpp)
+- [farm.cpp](./farm.cpp)
+- [mecung.cpp](./mecung.cpp)
+- [labth.cpp](./labth.cpp)
