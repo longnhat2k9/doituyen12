@@ -50,7 +50,9 @@ W.W.W.....W.
 
 ## SAMPLE OUTPUT (file lkcount.out):
 
+```
 3
+```
 
 ## OUTPUT DETAILS:
 
