@@ -19,3 +19,4 @@ Problem: [PDF](./de.pdf)
 - [mecung.cpp](./mecung.cpp)
 - [labth.cpp](./labth.cpp)
 - [region.cpp](./region.cpp)
+- [robot2.cpp](./robot2.cpp) *Problem Robot in File de.pdf (file problem part 2)*
