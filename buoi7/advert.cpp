@@ -3,44 +3,48 @@ using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(0); cin.tie(0);
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 	long long m, n; cin >> m >> n;
-
-	vector<long long>a, b;
-	long long u, v, x, y;
-	for(long long i = 0; i < n; i++)
+	vector<pair<long long, long long>>a(n);
+	for(auto &x : a)
 	{
-		cin >> u >> v;
-		auto it2 = lower_bound(b.begin(), b.end(), u); 
-		auto it = upper_bound(a.begin(), a.end(), v); 
-
-		if(it2 == b.end())
-		{
-			a.push_back(u);
-			b.push_back(v);
-		}
-		else if(it == a.end())
-		{
-			x = it2 - b.begin();
-			y = it - a.begin();
-			a.erase(a.begin() + x, a.end());
-			b.erase(b.begin() + x, b.end());
-			a.push_back(u);
-			b.push_back(v);
-		}
-		else 
-		{
-			x = it2 - b.begin();
-			y = it - a.begin();
-			a.erase(a.begin() + x, a.begin() + y);
-			b.erase(b.begin() + x, b.begin() + y);
-			a.push_back(u);
-			b.push_back(v);
-			sort(a.begin(), a.end());
-			sort(b.begin(), b.end());
-		}
+		cin >> x.first >> x.second;
 	}
 
-	cout << a.size();
+	reverse(a.begin(), a.end());
+	set<pair<long long, long long>>st;
+
+	long long cnt = 0;
+	bool ck;
+	for(auto &x : a)
+	{
+		auto b = st.lower_bound({x.first, 1e18});
+		
+		if(b != st.end() && max(x.first, b -> first) <= min(x.second, b -> second))
+		{
+			long long m = min(b -> first, x.first);
+			long long n = max(b -> second, x.second);
+			st.erase(b);
+			st.insert({m, n});
+			continue;
+		}
+
+		if(b != st.begin()) b--;
+
+		if(b != st.end() && max(x.first, b -> first) <= min(x.second, b -> second))
+		{
+			long long m = min(b -> first, x.first);
+			long long n = max(b -> second, x.second);
+			st.erase(b);
+			st.insert({m, n});
+			continue;
+		}
+
+		cnt++;
+
+		st.insert(x);
+	}
+
+	cout << cnt;
 }
