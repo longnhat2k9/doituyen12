@@ -16,34 +16,34 @@ int main()
 	set<pair<long long, long long>>st;
 
 	long long cnt = 0;
-	bool ck;
 	for(auto &x : a)
 	{
-		auto b = st.lower_bound({x.first, 1e18});
+	    long long m = x.first, n = x.second;
+		auto b = st.lower_bound({m, n});
+		bool ck = false;
+		if(b != st.end() && max(m, b -> first) <= min(n, b -> second))
+		{
+			ck = true;
+		}
+        auto b1 = b;
+		if(b != st.begin() && ck == false) b1--;
+
+		if(b1 != st.end() && max(m, b1 -> first) <= min(n, b1 -> second))
+		{
+			ck = true;
+			b = b1;
+		}
 		
-		if(b != st.end() && max(x.first, b -> first) <= min(x.second, b -> second))
+		while(b != st.end() && max(m, b -> first) <= min(n, b -> second))
 		{
-			long long m = min(b -> first, x.first);
-			long long n = max(b -> second, x.second);
-			st.erase(b);
-			st.insert({m, n});
-			continue;
+		    m = min(m, b -> first);
+		    n = max(n, b -> second);
+		    b = st.erase(b);
+		    ck = true;
 		}
-
-		if(b != st.begin()) b--;
-
-		if(b != st.end() && max(x.first, b -> first) <= min(x.second, b -> second))
-		{
-			long long m = min(b -> first, x.first);
-			long long n = max(b -> second, x.second);
-			st.erase(b);
-			st.insert({m, n});
-			continue;
-		}
-
-		cnt++;
-
-		st.insert(x);
+		
+		if(ck == false) cnt++;
+		st.insert({m, n});
 	}
 
 	cout << cnt;
