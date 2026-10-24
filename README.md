@@ -6,3 +6,4 @@
 |[buoi3](./buoi3/readme.md)|Loang|
 |[buoi5](./buoi5/readme.md)|Đề Hà Tĩnh 12 (2025 - 2026)|
 |[buoi7](./buoi7/readme.md)|Đề Ôn Tập 1|
+|[buoi9](./buoi9/readme.md)|Đề Lam Sơn (2025 - 2026) + Hà Tĩnh (2022 - 2023)
