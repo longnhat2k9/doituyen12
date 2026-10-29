@@ -10,3 +10,11 @@ Problemset: [PDF](./hatinh.pdf)
 - [sum.cpp](./sum.cpp)
 - [dsdb.cpp](./dsdb.cpp)
 - [ckn.cpp](./ckn.cpp)
+
+# Đề Hà Tĩnh 2020 - 2021
+
+Problemset: [PDF](./hatinh21.pdf)
+
+- [team.cpp](./team.cpp)
+- [lucky.cpp](./lucky.cpp)
+- [plan.cpp](./plan.cpp)
