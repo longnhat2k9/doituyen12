@@ -2,6 +2,9 @@
 
 Problemset: [PDF](./lamson.pdf)
 
+- [chiaday.cpp](./chiaday.cpp)
+- [xepbi.cpp](./xepbi.cpp) >Waiting for solution
+- [xaungannhat.cpp](./xaungannhat.cpp) >Waiting for solution
 
 # Đề Hà Tĩnh 2022 - 2023
 
