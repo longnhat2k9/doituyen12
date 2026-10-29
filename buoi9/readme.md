@@ -18,3 +18,13 @@ Problemset: [PDF](./hatinh21.pdf)
 - [team.cpp](./team.cpp)
 - [lucky.cpp](./lucky.cpp)
 - [plan.cpp](./plan.cpp)
+
+# Đề Hà Tĩnh 2021 - 2022
+
+Problemset: [PDF](./hatinh22.pdf)
+
+Password: ```2024@12```
+
+- [dig.cpp](./dig.cpp)
+- [spin.cpp](./spin.cpp)
+- [tabg.cpp](./tabg.cpp) >Waiting for solution
