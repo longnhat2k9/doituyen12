@@ -31,3 +31,11 @@ Password: ```2024@12```
 - [dig.cpp](./dig.cpp)
 - [spin.cpp](./spin.cpp)
 - [tabg.cpp](./tabg.cpp) >Waiting for solution
+
+# Đề Hà Tĩnh 2017 - 2018
+
+Problemset: [PDF](./hatinh18.pdf)
+
+- [findnum.cpp](./findnum.cpp)
+- [cprime.cpp](./cprime.cpp)
+- [farm.cpp](./farm.cpp)
