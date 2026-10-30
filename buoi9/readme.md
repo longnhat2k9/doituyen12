@@ -39,3 +39,11 @@ Problemset: [PDF](./hatinh18.pdf)
 - [findnum.cpp](./findnum.cpp)
 - [cprime.cpp](./cprime.cpp)
 - [farm.cpp](./farm.cpp)
+
+# Đề Hà Tĩnh 2016 - 2017
+
+Problemset: [PDF](./hatinh17.pdf)
+
+- [bieuthuc.cpp](./bieuthuc.cpp)
+- [xaucon.cpp](./xaucon.cpp)
+- [region.cpp](./region.cpp)
