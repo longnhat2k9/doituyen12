@@ -8,6 +8,7 @@ long long dx[4] = {1, 0, -1, 0};
 long long dy[4] = {0, 1, 0, -1};
 queue<pair<long long, long long>>q;
 long long cnt = 0;
+bool ck;
 
 void bfs()
 {
@@ -29,8 +30,7 @@ void bfs()
 
 			if(a[nx][ny] == '#') 
 			{
-				cnt = 0;
-				return;
+			    ck = false;
 			}
 		}
 
@@ -60,6 +60,7 @@ int main()
 		{
 			if(a[i][j] == '0' && d[i][j] == 0)
 			{
+			    ck = true;
 				while(!q.empty())
 				{
 					q.pop();
@@ -70,7 +71,7 @@ int main()
 				d[i][j] = 1;
 				bfs();
 
-				if(cnt != 0)
+				if(ck == true)
 				{
 					cout << cnt;
 					return 0;
