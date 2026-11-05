@@ -3,6 +3,8 @@ using namespace std;
 
 long long n, b;
 
+map<vector<long long>, long long>mp;
+
 void swap(vector<long long>&a)
 {
     vector<long long> org = a;
@@ -29,21 +31,40 @@ int main()
     cin >> n >> b;
     vector<long long>a(n, 0);
     for(auto &x : a) cin >> x;
-    vector<long long>org = a;
     
+    mp[a] = 0;
     long long t = 1;
-    swap(a);
+    swap(a); mp[a] = t;
+    long long r;
     
-    while(a != org && t < b)
+    while(t < b)
     {
         t++;
         swap(a);
+        if(mp[a] != 0) 
+        {
+            r = mp[a];
+            break;
+        }
+        mp[a] = t;
     }
-    
-    long long x = b % t;
-    while(x--)
+
+    if(t == b)
     {
-        swap(a);
+        for(auto & k : a) cout << k << "\n";
+        return 0;
+    }
+
+    t -= r;
+    
+    long long x = (b - r) % t + r;
+    for(auto &c : mp)
+    {
+        if(c.second == x)
+        {
+            a = c.first;
+            break;
+        }
     }
     
     for(auto & k : a) cout << k << "\n";
