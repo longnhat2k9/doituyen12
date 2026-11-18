@@ -11,3 +11,4 @@
 |[buoi12](./buoi12/readme.md)|Đề Hà Tĩnh (2015 - 2016)|
 |[graphcses](./graphcses.pdf)|Đồ Thị - CSES|
 |[buoi13](./buoi13/readme.md)|Đề Luyện tập 1|
+|[test2](./test2/readme.md)|Đề Luyện tập 2|
